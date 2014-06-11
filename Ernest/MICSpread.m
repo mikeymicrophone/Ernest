@@ -67,10 +67,14 @@
     NSLog([NSString stringWithFormat:@"The birth row is %d and the column is %d", birth_card_row, birth_card_column]);
     NSMutableAttributedString *coloredAscii = [[NSMutableAttributedString alloc] initWithString:[self asciiSpread]];
     int starting_position = 0;
-    starting_position = 9 + (21 * birth_card_row) + [[@{@"0":@18,@"1":@15,@"2":@12,@"3":@9,@"4":@6,@"5":@3,@"6":@0} objectForKey:[NSString stringWithFormat:@"%d", birth_card_column]] intValue];
-    NSLog([NSString stringWithFormat:@"(27 * birth_card_row): %d", (27 * birth_card_row)]);
-    NSLog([NSString stringWithFormat:@"birth_card_column: %d", [[@{@"0":@18,@"1":@15,@"2":@12,@"3":@9,@"4":@6,@"5":@3,@"6":@0} objectForKey:[NSString stringWithFormat:@"%d", birth_card_column]] intValue]]);
-    NSLog([NSString stringWithFormat:@"starting_position: %d", starting_position]);
+    if (birth_card_row == 7) {
+        starting_position = [[@{@"0":@6,@"1":@3, @"2":@0} objectForKey:[NSString stringWithFormat:@"%d", birth_card_column]] intValue];
+    } else {
+        starting_position = 9 + (21 * birth_card_row) + [[@{@"0":@18,@"1":@15,@"2":@12,@"3":@9,@"4":@6,@"5":@3,@"6":@0} objectForKey:[NSString stringWithFormat:@"%d", birth_card_column]] intValue];
+    }
+//    NSLog([NSString stringWithFormat:@"(27 * birth_card_row): %d", (27 * birth_card_row)]);
+//    NSLog([NSString stringWithFormat:@"birth_card_column: %d", [[@{@"0":@18,@"1":@15,@"2":@12,@"3":@9,@"4":@6,@"5":@3,@"6":@0} objectForKey:[NSString stringWithFormat:@"%d", birth_card_column]] intValue]]);
+//    NSLog([NSString stringWithFormat:@"starting_position: %d", starting_position]);
     [coloredAscii addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(starting_position, 2)];
     return coloredAscii;
 }
