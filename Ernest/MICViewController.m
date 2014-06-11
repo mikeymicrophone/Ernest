@@ -8,6 +8,7 @@
 
 #import "MICViewController.h"
 #import "MICCard.h"
+#import "MICSpread.h"
 
 @interface MICViewController ()
 
@@ -23,6 +24,9 @@
     MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
     
     NSMutableArray *solar_spread = [MICCard grand_solar_spread_for_years:2014 - year];
+    
+    MICSpread *spread = [MICSpread initializeWithStack:solar_spread];
+    [spread asciiSpread];
     
 //    NSLog([NSString stringWithFormat:@"Solar Spread for %d: %@", year, solar_spread]);
     

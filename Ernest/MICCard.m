@@ -111,6 +111,14 @@
     return NO;
 }
 
+-(NSString *)abbreviation {
+    NSDictionary *face_abbreviations = @{@"Ace": @"A", @"Two": @"2", @"Three": @"3", @"Four": @"4", @"Five": @"5", @"Six": @"6", @"Seven": @"7", @"Eight": @"8", @"Nine": @"9", @"Ten": @"10", @"Jack": @"J", @"Queen": @"Q", @"King": @"K"};
+    NSString *face_abbreviation = [face_abbreviations objectForKey:self.face];
+    NSString *suit_abbreviation = [self.suit substringToIndex:1];
+    
+    return [face_abbreviation stringByAppendingString:suit_abbreviation];
+}
+
 -(NSString *)description {
     return [NSString stringWithFormat:@"%@ of %@", self.face, self.suit];
 }
