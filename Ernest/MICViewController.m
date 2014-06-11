@@ -16,14 +16,22 @@
 
 @implementation MICViewController
 - (IBAction)displayBirthCard:(UIDatePicker*)birthdate {
+    NSTimeInterval seconds = [birthdate.date timeIntervalSinceNow];
+    int years_to_count = seconds / (-60*60*24*365.25);
+    NSLog([NSString stringWithFormat:@"years_to_count: %d", years_to_count]);
+    
+    
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:birthdate.date];
     NSInteger day = [components day];
     NSInteger month = [components month];
     NSInteger year = [components year];
     
+    NSDateComponents *now = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    
+    
     MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
     
-    NSMutableArray *solar_spread = [MICCard grand_solar_spread_for_years:2014 - year];
+    NSMutableArray *solar_spread = [MICCard grand_solar_spread_for_years:years_to_count];
     
     MICSpread *spread = [MICSpread initializeWithStack:solar_spread];
     
