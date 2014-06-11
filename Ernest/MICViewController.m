@@ -7,12 +7,24 @@
 //
 
 #import "MICViewController.h"
+#import "MICCard.h"
 
 @interface MICViewController ()
 
 @end
 
 @implementation MICViewController
+- (IBAction)displayBirthCard:(UIDatePicker*)birthdate {
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:birthdate.date];
+    NSInteger day = [components day];
+    NSInteger month = [components month];
+    NSInteger year = [components year];
+    
+    MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
+    
+    self.suitDisplay.text = birth_card.suit;
+    self.faceDisplay.text = birth_card.face;
+}
 
 - (void)viewDidLoad
 {

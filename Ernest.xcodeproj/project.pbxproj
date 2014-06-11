@@ -22,6 +22,7 @@
 		47C59EEF1948178800137F24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECE1948178800137F24 /* UIKit.framework */; };
 		47C59EF71948178800137F24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47C59EF51948178800137F24 /* InfoPlist.strings */; };
 		47C59EF91948178800137F24 /* ErnestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59EF81948178800137F24 /* ErnestTests.m */; };
+		47C59F0419481EEF00137F24 /* MICCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59F0319481EEF00137F24 /* MICCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		47C59EF41948178800137F24 /* ErnestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErnestTests-Info.plist"; sourceTree = "<group>"; };
 		47C59EF61948178800137F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47C59EF81948178800137F24 /* ErnestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErnestTests.m; sourceTree = "<group>"; };
+		47C59F0219481EEF00137F24 /* MICCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICCard.h; sourceTree = "<group>"; };
+		47C59F0319481EEF00137F24 /* MICCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				47C59EDF1948178800137F24 /* Main_iPad.storyboard */,
 				47C59EE21948178800137F24 /* MICViewController.h */,
 				47C59EE31948178800137F24 /* MICViewController.m */,
+				47C59F0219481EEF00137F24 /* MICCard.h */,
+				47C59F0319481EEF00137F24 /* MICCard.m */,
 				47C59EE51948178800137F24 /* Images.xcassets */,
 				47C59ED11948178800137F24 /* Supporting Files */,
 			);
@@ -257,6 +262,7 @@
 				47C59EDB1948178800137F24 /* MICAppDelegate.m in Sources */,
 				47C59EE41948178800137F24 /* MICViewController.m in Sources */,
 				47C59ED71948178800137F24 /* main.m in Sources */,
+				47C59F0419481EEF00137F24 /* MICCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

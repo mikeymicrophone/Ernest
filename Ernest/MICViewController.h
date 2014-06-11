@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MICViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *faceDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *suitDisplay;
 
 @end
