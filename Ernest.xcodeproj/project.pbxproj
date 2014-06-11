@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47C59ECB1948178800137F24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECA1948178800137F24 /* Foundation.framework */; };
+		47C59ECD1948178800137F24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECC1948178800137F24 /* CoreGraphics.framework */; };
+		47C59ECF1948178800137F24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECE1948178800137F24 /* UIKit.framework */; };
+		47C59ED51948178800137F24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47C59ED31948178800137F24 /* InfoPlist.strings */; };
+		47C59ED71948178800137F24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59ED61948178800137F24 /* main.m */; };
+		47C59EDB1948178800137F24 /* MICAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59EDA1948178800137F24 /* MICAppDelegate.m */; };
+		47C59EDE1948178800137F24 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C59EDC1948178800137F24 /* Main_iPhone.storyboard */; };
+		47C59EE11948178800137F24 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C59EDF1948178800137F24 /* Main_iPad.storyboard */; };
+		47C59EE41948178800137F24 /* MICViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59EE31948178800137F24 /* MICViewController.m */; };
+		47C59EE61948178800137F24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C59EE51948178800137F24 /* Images.xcassets */; };
+		47C59EED1948178800137F24 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59EEC1948178800137F24 /* XCTest.framework */; };
+		47C59EEE1948178800137F24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECA1948178800137F24 /* Foundation.framework */; };
+		47C59EEF1948178800137F24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECE1948178800137F24 /* UIKit.framework */; };
+		47C59EF71948178800137F24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47C59EF51948178800137F24 /* InfoPlist.strings */; };
+		47C59EF91948178800137F24 /* ErnestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59EF81948178800137F24 /* ErnestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47C59EF01948178800137F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47C59EBF1948178800137F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47C59EC61948178800137F24;
+			remoteInfo = Ernest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47C59EC71948178800137F24 /* Ernest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ernest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C59ECA1948178800137F24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47C59ECC1948178800137F24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47C59ECE1948178800137F24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47C59ED21948178800137F24 /* Ernest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ernest-Info.plist"; sourceTree = "<group>"; };
+		47C59ED41948178800137F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47C59ED61948178800137F24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47C59ED81948178800137F24 /* Ernest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ernest-Prefix.pch"; sourceTree = "<group>"; };
+		47C59ED91948178800137F24 /* MICAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICAppDelegate.h; sourceTree = "<group>"; };
+		47C59EDA1948178800137F24 /* MICAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICAppDelegate.m; sourceTree = "<group>"; };
+		47C59EDD1948178800137F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		47C59EE01948178800137F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		47C59EE21948178800137F24 /* MICViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICViewController.h; sourceTree = "<group>"; };
+		47C59EE31948178800137F24 /* MICViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICViewController.m; sourceTree = "<group>"; };
+		47C59EE51948178800137F24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47C59EEB1948178800137F24 /* ErnestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErnestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C59EEC1948178800137F24 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		47C59EF41948178800137F24 /* ErnestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErnestTests-Info.plist"; sourceTree = "<group>"; };
+		47C59EF61948178800137F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47C59EF81948178800137F24 /* ErnestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErnestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47C59EC41948178800137F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C59ECD1948178800137F24 /* CoreGraphics.framework in Frameworks */,
+				47C59ECF1948178800137F24 /* UIKit.framework in Frameworks */,
+				47C59ECB1948178800137F24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C59EE81948178800137F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C59EED1948178800137F24 /* XCTest.framework in Frameworks */,
+				47C59EEF1948178800137F24 /* UIKit.framework in Frameworks */,
+				47C59EEE1948178800137F24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47C59EBE1948178800137F24 = {
+			isa = PBXGroup;
+			children = (
+				47C59ED01948178800137F24 /* Ernest */,
+				47C59EF21948178800137F24 /* ErnestTests */,
+				47C59EC91948178800137F24 /* Frameworks */,
+				47C59EC81948178800137F24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47C59EC81948178800137F24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47C59EC71948178800137F24 /* Ernest.app */,
+				47C59EEB1948178800137F24 /* ErnestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47C59EC91948178800137F24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C59ECA1948178800137F24 /* Foundation.framework */,
+				47C59ECC1948178800137F24 /* CoreGraphics.framework */,
+				47C59ECE1948178800137F24 /* UIKit.framework */,
+				47C59EEC1948178800137F24 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47C59ED01948178800137F24 /* Ernest */ = {
+			isa = PBXGroup;
+			children = (
+				47C59ED91948178800137F24 /* MICAppDelegate.h */,
+				47C59EDA1948178800137F24 /* MICAppDelegate.m */,
+				47C59EDC1948178800137F24 /* Main_iPhone.storyboard */,
+				47C59EDF1948178800137F24 /* Main_iPad.storyboard */,
+				47C59EE21948178800137F24 /* MICViewController.h */,
+				47C59EE31948178800137F24 /* MICViewController.m */,
+				47C59EE51948178800137F24 /* Images.xcassets */,
+				47C59ED11948178800137F24 /* Supporting Files */,
+			);
+			path = Ernest;
+			sourceTree = "<group>";
+		};
+		47C59ED11948178800137F24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C59ED21948178800137F24 /* Ernest-Info.plist */,
+				47C59ED31948178800137F24 /* InfoPlist.strings */,
+				47C59ED61948178800137F24 /* main.m */,
+				47C59ED81948178800137F24 /* Ernest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C59EF21948178800137F24 /* ErnestTests */ = {
+			isa = PBXGroup;
+			children = (
+				47C59EF81948178800137F24 /* ErnestTests.m */,
+				47C59EF31948178800137F24 /* Supporting Files */,
+			);
+			path = ErnestTests;
+			sourceTree = "<group>";
+		};
+		47C59EF31948178800137F24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C59EF41948178800137F24 /* ErnestTests-Info.plist */,
+				47C59EF51948178800137F24 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47C59EC61948178800137F24 /* Ernest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C59EFC1948178800137F24 /* Build configuration list for PBXNativeTarget "Ernest" */;
+			buildPhases = (
+				47C59EC31948178800137F24 /* Sources */,
+				47C59EC41948178800137F24 /* Frameworks */,
+				47C59EC51948178800137F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ernest;
+			productName = Ernest;
+			productReference = 47C59EC71948178800137F24 /* Ernest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47C59EEA1948178800137F24 /* ErnestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C59EFF1948178800137F24 /* Build configuration list for PBXNativeTarget "ErnestTests" */;
+			buildPhases = (
+				47C59EE71948178800137F24 /* Sources */,
+				47C59EE81948178800137F24 /* Frameworks */,
+				47C59EE91948178800137F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47C59EF11948178800137F24 /* PBXTargetDependency */,
+			);
+			name = ErnestTests;
+			productName = ErnestTests;
+			productReference = 47C59EEB1948178800137F24 /* ErnestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47C59EBF1948178800137F24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MIC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = MICharisma;
+				TargetAttributes = {
+					47C59EEA1948178800137F24 = {
+						TestTargetID = 47C59EC61948178800137F24;
+					};
+				};
+			};
+			buildConfigurationList = 47C59EC21948178800137F24 /* Build configuration list for PBXProject "Ernest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47C59EBE1948178800137F24;
+			productRefGroup = 47C59EC81948178800137F24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47C59EC61948178800137F24 /* Ernest */,
+				47C59EEA1948178800137F24 /* ErnestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47C59EC51948178800137F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C59EE11948178800137F24 /* Main_iPad.storyboard in Resources */,
+				47C59EE61948178800137F24 /* Images.xcassets in Resources */,
+				47C59EDE1948178800137F24 /* Main_iPhone.storyboard in Resources */,
+				47C59ED51948178800137F24 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C59EE91948178800137F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C59EF71948178800137F24 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47C59EC31948178800137F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C59EDB1948178800137F24 /* MICAppDelegate.m in Sources */,
+				47C59EE41948178800137F24 /* MICViewController.m in Sources */,
+				47C59ED71948178800137F24 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C59EE71948178800137F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C59EF91948178800137F24 /* ErnestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47C59EF11948178800137F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47C59EC61948178800137F24 /* Ernest */;
+			targetProxy = 47C59EF01948178800137F24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47C59ED31948178800137F24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C59ED41948178800137F24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47C59EDC1948178800137F24 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C59EDD1948178800137F24 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		47C59EDF1948178800137F24 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C59EE01948178800137F24 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		47C59EF51948178800137F24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C59EF61948178800137F24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47C59EFA1948178800137F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47C59EFB1948178800137F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47C59EFD1948178800137F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ernest/Ernest-Prefix.pch";
+				INFOPLIST_FILE = "Ernest/Ernest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47C59EFE1948178800137F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ernest/Ernest-Prefix.pch";
+				INFOPLIST_FILE = "Ernest/Ernest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47C59F001948178800137F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ernest.app/Ernest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ernest/Ernest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ErnestTests/ErnestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		47C59F011948178800137F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ernest.app/Ernest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ernest/Ernest-Prefix.pch";
+				INFOPLIST_FILE = "ErnestTests/ErnestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47C59EC21948178800137F24 /* Build configuration list for PBXProject "Ernest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C59EFA1948178800137F24 /* Debug */,
+				47C59EFB1948178800137F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47C59EFC1948178800137F24 /* Build configuration list for PBXNativeTarget "Ernest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C59EFD1948178800137F24 /* Debug */,
+				47C59EFE1948178800137F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47C59EFF1948178800137F24 /* Build configuration list for PBXNativeTarget "ErnestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C59F001948178800137F24 /* Debug */,
+				47C59F011948178800137F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47C59EBF1948178800137F24 /* Project object */;
+}
