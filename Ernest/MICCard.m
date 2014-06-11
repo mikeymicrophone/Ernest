@@ -74,7 +74,7 @@
         [hearts_pile addObjectsFromArray:spades_pile];
         
         stack = hearts_pile;
-        NSLog([NSString stringWithFormat:@"current ordering midway after %d stretches: %@", i, stack]);
+//        NSLog([NSString stringWithFormat:@"current ordering midway after %d stretches: %@", i, stack]);
         
         hearts_pile = [[NSMutableArray alloc] init];
         clubs_pile = [[NSMutableArray alloc] init];
@@ -97,9 +97,9 @@
         [hearts_pile addObjectsFromArray:spades_pile];
         
         stack = hearts_pile;
-        NSLog([NSString stringWithFormat:@"current ordering after %d stretches: %@", i, stack]);
+//        NSLog([NSString stringWithFormat:@"current ordering after %d stretches: %@", i, stack]);
     }
-    return stack;
+    return [[stack reverseObjectEnumerator] allObjects];
 }
 
 +(BOOL)card:(MICCard *)card matchesCard:(MICCard *)match {

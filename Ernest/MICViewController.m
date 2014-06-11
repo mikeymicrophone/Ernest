@@ -24,13 +24,16 @@
     
     NSMutableArray *solar_spread = [MICCard grand_solar_spread_for_years:2014 - year];
     
-    NSLog([NSString stringWithFormat:@"Solar Spread for %d: %@", year, solar_spread]);
+//    NSLog([NSString stringWithFormat:@"Solar Spread for %d: %@", year, solar_spread]);
     
     int position = 0;
-    for (int pos = 0; [MICCard card:birth_card matchesCard:[solar_spread objectAtIndex:pos]]; pos++) {
+    for (int pos = 0; pos < 55; pos++) {
         position = pos;
+        if ([MICCard card:birth_card matchesCard:[solar_spread objectAtIndex:pos]]) {
+            break;
+        }
     }
-    NSLog([NSString stringWithFormat:@"position of birth card in solar spread: %d", position]);
+//    NSLog([NSString stringWithFormat:@"position of birth card in solar spread: %d", position]);
     
     self.suitDisplay.text = birth_card.suit;
     self.faceDisplay.text = birth_card.face;
