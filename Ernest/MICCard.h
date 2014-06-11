@@ -16,5 +16,8 @@
 +(MICCard *)initWithSuit:(NSString *)suit andFace:(NSString *)face;
 +(MICCard *)birthCardForMonth:(NSInteger)month andDay:(NSInteger)day;
 +(NSMutableArray *)default_card_stack;
++(NSMutableArray *)grand_solar_spread_for_years:(NSInteger)years;
++(BOOL)card:(MICCard *)card matchesCard:(MICCard *)match;
+-(NSString *)description;
 
 @end
