@@ -11,7 +11,6 @@
 @interface MICViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *faceDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *suitDisplay;
-@property (weak, nonatomic) IBOutlet UILabel *venusFace;
-@property (weak, nonatomic) IBOutlet UILabel *venusSuit;
+@property (weak, nonatomic) IBOutlet UILabel *solarSpreadDisplay;
 
 @end

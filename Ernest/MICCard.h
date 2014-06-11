@@ -18,6 +18,7 @@
 +(NSMutableArray *)default_card_stack;
 +(NSMutableArray *)grand_solar_spread_for_years:(NSInteger)years;
 +(BOOL)card:(MICCard *)card matchesCard:(MICCard *)match;
+-(BOOL)matchesCard:(MICCard *)match;
 -(NSString *)description;
 
 @end

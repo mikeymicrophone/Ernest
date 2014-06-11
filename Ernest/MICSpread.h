@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MICCard.h"
 
 @interface MICSpread : NSObject
 
@@ -15,5 +16,6 @@
 +(MICSpread *)initializeWithStack:(NSArray *)card_stack;
 
 -(NSString *)asciiSpread;
+-(NSAttributedString *)coloredAsciiSpreadFor:(MICCard *)birth_card;
 
 @end

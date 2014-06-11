@@ -7,6 +7,7 @@
 //
 
 #import "MICSpread.h"
+#import "MICCard.h"
 
 @implementation MICSpread
 
@@ -39,7 +40,7 @@
 -(NSString *)asciiSpread {
     NSString *ascii;
     NSArray *ruling_group = [[self rows] objectAtIndex:7];
-    ascii = [NSString stringWithFormat:@"      %@|%@|%@      \n", [[ruling_group objectAtIndex:2] abbreviation], [[ruling_group objectAtIndex:1] abbreviation], [[ruling_group objectAtIndex:0] abbreviation]];
+    ascii = [NSString stringWithFormat:@"%@|%@|%@\n", [[ruling_group objectAtIndex:2] abbreviation], [[ruling_group objectAtIndex:1] abbreviation], [[ruling_group objectAtIndex:0] abbreviation]];
     
     for (int row = 0; row < 7; row++) {
         NSArray *planetary_group = self.rows[row];
@@ -49,6 +50,22 @@
     NSLog([NSString stringWithFormat:@"%@", ascii]);
     
     return ascii;
+}
+
+-(NSAttributedString *)coloredAsciiSpreadFor:(MICCard *)birth_card {
+    __block int birth_card_row;
+    __block int birth_card_column;
+    [self.rows enumerateObjectsUsingBlock:^(NSArray *planetary_group, NSUInteger row, BOOL *stop) {
+        [planetary_group enumerateObjectsUsingBlock:^(MICCard *card, NSUInteger column, BOOL *stop) {
+            if ([card matchesCard:birth_card]) {
+                birth_card_row = row;
+                birth_card_column = column;
+                *stop = YES;
+            }
+        }];
+    }];
+    NSLog([NSString stringWithFormat:@"The birth row is %d and the column is %d", birth_card_row, birth_card_column]);
+    return [[NSMutableAttributedString alloc] initWithString:[self asciiSpread]];
 }
 
 @end

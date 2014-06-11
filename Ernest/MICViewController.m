@@ -26,7 +26,7 @@
     NSMutableArray *solar_spread = [MICCard grand_solar_spread_for_years:2014 - year];
     
     MICSpread *spread = [MICSpread initializeWithStack:solar_spread];
-    [spread asciiSpread];
+    
     
 //    NSLog([NSString stringWithFormat:@"Solar Spread for %d: %@", year, solar_spread]);
     
@@ -41,8 +41,7 @@
     
     self.suitDisplay.text = birth_card.suit;
     self.faceDisplay.text = birth_card.face;
-    self.venusFace.text = [[solar_spread objectAtIndex:position + 1] face];
-    self.venusSuit.text = [[solar_spread objectAtIndex:position + 1] suit];
+    [self.solarSpreadDisplay setAttributedText:[spread coloredAsciiSpreadFor:birth_card]];
 }
 
 - (void)viewDidLoad
