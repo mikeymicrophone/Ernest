@@ -59,13 +59,13 @@
 }
 
 -(MICCard *)karmaCardOwe {
-    MICCard *karma_card = [[MICSpread mundane_spread] cardInPosition:[[MICSpread grand_solar_spread_for_years:1] positionOfCard:self]];
+    MICCard *karma_card = [[MICSpread natural_spread] cardInPosition:[[MICSpread life_spread] positionOfCard:self]];
     NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
     return karma_card;
 }
 
 -(MICCard *)karmaCardOwed {
-    MICCard *karma_card = [[MICSpread grand_solar_spread_for_years:1] cardInPosition:[[MICSpread mundane_spread] positionOfCard:self]];
+    MICCard *karma_card = [[MICSpread life_spread] cardInPosition:[[MICSpread natural_spread] positionOfCard:self]];
     NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
     return karma_card;
 }

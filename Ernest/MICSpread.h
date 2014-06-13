@@ -16,7 +16,8 @@
 
 +(MICSpread *)initWithStack:(NSArray *)card_stack;
 +(NSMutableArray *)default_card_stack;
-+(MICSpread *)mundane_spread;
++(MICSpread *)natural_spread;
++(MICSpread *)life_spread;
 +(MICSpread *)grand_solar_spread_for_years:(NSInteger)years;
 -(NSString *)asciiSpread;
 -(NSAttributedString *)coloredAsciiSpreadFor:(MICCard *)birth_card;

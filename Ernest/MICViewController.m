@@ -28,7 +28,7 @@
     MICCard *karma_card = [birth_card karmaCardOwe];
     MICCard *other_karma_card = [birth_card karmaCardOwed];
     
-    MICSpread *spread = [MICSpread grand_solar_spread_for_years:years_to_count];
+    MICSpread *spread = [MICSpread grand_solar_spread_for_years:years_to_count + 1];
     
     self.suitDisplay.text = birth_card.suit;
     self.faceDisplay.text = birth_card.face;

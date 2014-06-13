@@ -32,8 +32,13 @@
     return cards;
 }
 
-+(MICSpread *)mundane_spread {
++(MICSpread *)natural_spread {
     MICSpread *spread = [self initWithStack:[self default_card_stack]];
+    return spread;
+}
+
++(MICSpread *)life_spread {
+    MICSpread *spread = [self grand_solar_spread_for_years:1];
     return spread;
 }
 
