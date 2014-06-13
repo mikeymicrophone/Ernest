@@ -21,6 +21,7 @@
 +(BOOL)card:(MICCard *)card matchesCard:(MICCard *)match;
 -(BOOL)matchesCard:(MICCard *)match;
 -(MICCard *)karmaCardOwe;
+-(MICCard *)karmaCardOwed;
 -(NSString *)description;
 -(NSString *)abbreviation;
 

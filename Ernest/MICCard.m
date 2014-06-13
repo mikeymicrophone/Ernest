@@ -64,4 +64,10 @@
     return karma_card;
 }
 
+-(MICCard *)karmaCardOwed {
+    MICCard *karma_card = [[MICSpread grand_solar_spread_for_years:1] cardInPosition:[[MICSpread mundane_spread] positionOfCard:self]];
+    NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
+    return karma_card;
+}
+
 @end

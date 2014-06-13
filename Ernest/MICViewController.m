@@ -26,6 +26,7 @@
     MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
     
     MICCard *karma_card = [birth_card karmaCardOwe];
+    MICCard *other_karma_card = [birth_card karmaCardOwed];
     
     MICSpread *spread = [MICSpread grand_solar_spread_for_years:years_to_count];
     
