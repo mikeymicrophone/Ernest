@@ -32,6 +32,7 @@
     
     [spread colorCard:birth_card withColor:[UIColor greenColor]];
     [spread colorCard:karma_card withColor:[UIColor brownColor]];
+    [spread colorCard:other_karma_card withColor:[UIColor purpleColor]];
     [spread colorCard:environment_card withColor:[UIColor yellowColor]];
     
     self.suitDisplay.text = birth_card.suit;

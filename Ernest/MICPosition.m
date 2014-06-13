@@ -37,7 +37,13 @@
 }
 
 -(NSInteger)asciiPosition {
-    return (self.vertical_position * 21) + (18 - (self.horizontal_position * 3)) + 9;
+    int starting_position;
+    if (self.vertical_position == 7) {
+        starting_position = (6 - self.horizontal_position);
+    } else {
+        starting_position = (self.vertical_position * 21) + (18 - (self.horizontal_position * 3)) + 9;
+    }
+    return starting_position;
 }
 
 +(NSDictionary *)planetPositions {
