@@ -21,6 +21,7 @@
 +(MICPosition *)initWithHorizontal:(NSInteger)horizontal andVertical:(NSInteger)vertical;
 -(NSString *)horizontalPlanet;
 -(NSString *)verticalPlanet;
+-(NSInteger)asciiPosition;
 +(NSDictionary *)planetPositions;
 +(NSString *)planetForPosition:(NSInteger)position;
 

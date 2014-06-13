@@ -36,6 +36,10 @@
     return [MICPosition planetForPosition:self.vertical_position];
 }
 
+-(NSInteger)asciiPosition {
+    return (self.vertical_position * 21) + (18 - (self.horizontal_position * 3)) + 9;
+}
+
 +(NSDictionary *)planetPositions {
     return @{@"0": @"Mercury", @"1": @"Venus", @"2": @"Mars", @"3": @"Jupiter", @"4": @"Saturn", @"5": @"Uranus", @"6": @"Neptune"};
 }

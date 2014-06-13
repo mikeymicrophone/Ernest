@@ -140,6 +140,11 @@
     return ascii;
 }
 
+-(NSMutableAttributedString *)coloredAscii {
+    NSMutableAttributedString *ascii = [[NSMutableAttributedString alloc] initWithString:[self asciiSpread]];
+    return ascii;
+}
+
 -(NSAttributedString *)coloredAsciiSpreadFor:(MICCard *)birth_card {
     __block int birth_card_row;
     __block int birth_card_column;
@@ -153,7 +158,6 @@
         }];
     }];
 //    NSLog([NSString stringWithFormat:@"The birth row is %d and the column is %d", birth_card_row, birth_card_column]);
-    NSMutableAttributedString *coloredAscii = [[NSMutableAttributedString alloc] initWithString:[self asciiSpread]];
     
     UIColor *birth_card_color = [UIColor greenColor];
     int starting_position = 0;
@@ -162,7 +166,9 @@
     } else {
         starting_position = 9 + (21 * birth_card_row) + [[@{@"0":@18,@"1":@15,@"2":@12,@"3":@9,@"4":@6,@"5":@3,@"6":@0} objectForKey:[NSString stringWithFormat:@"%d", birth_card_column]] intValue];
     }
-    [coloredAscii addAttribute:NSForegroundColorAttributeName value:birth_card_color range:NSMakeRange(starting_position, 2)];
+    self.coloredSpread = [self coloredAscii];
+    
+    [self.coloredSpread addAttribute:NSForegroundColorAttributeName value:birth_card_color range:NSMakeRange(starting_position, 2)];
     
     UIColor *year_path_color = [UIColor blueColor];
     if (birth_card_row == 7) {
@@ -248,14 +254,22 @@
                 break;
         }
         
-        [coloredAscii addAttribute:NSForegroundColorAttributeName value:year_path_color range:NSMakeRange(9 + (21 * first_row), first_row_end)];
-        [coloredAscii addAttribute:NSForegroundColorAttributeName value:year_path_color range:NSMakeRange(9 + (21 * second_row) + second_row_start, (21 - second_row_start))];
+        [self.coloredSpread addAttribute:NSForegroundColorAttributeName value:year_path_color range:NSMakeRange(9 + (21 * first_row), first_row_end)];
+        [self.coloredSpread addAttribute:NSForegroundColorAttributeName value:year_path_color range:NSMakeRange(9 + (21 * second_row) + second_row_start, (21 - second_row_start))];
         if (third_row_start != 0) {
-            [coloredAscii addAttribute:NSForegroundColorAttributeName value:year_path_color range:NSMakeRange(9 + (21 * third_row) + third_row_start, (21 - third_row_start))];
+            [self.coloredSpread addAttribute:NSForegroundColorAttributeName value:year_path_color range:NSMakeRange(9 + (21 * third_row) + third_row_start, (21 - third_row_start))];
         }
     }
     
-    return coloredAscii;
+    return self.coloredSpread;
+}
+
+-(void)colorCard:(MICCard *)card withColor:(UIColor *)color {
+    if (!self.coloredSpread) {
+        self.coloredSpread = [self coloredAscii];
+    }
+    NSRange colored_range = NSMakeRange([[self positionOfCard:card] asciiPosition], 2);
+    [self.coloredSpread addAttribute:NSForegroundColorAttributeName value:color range:colored_range];
 }
 
 -(NSInteger)rowOfCard:(MICCard *)card {
@@ -291,6 +305,12 @@
 
 -(MICCard *)cardInPosition:(MICPosition *)position {
     MICCard *card = [[[self rows] objectAtIndex:position.vertical_position] objectAtIndex:position.horizontal_position];
+    return card;
+}
+
+-(MICCard *)environmentCardForCard:(MICCard *)birth_card {
+    MICCard *card = [self cardInPosition:[[MICSpread life_spread] positionOfCard:birth_card]];
+    NSLog([NSString stringWithFormat:@"environment card: %@", card]);
     return card;
 }
 

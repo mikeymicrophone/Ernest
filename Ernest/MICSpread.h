@@ -13,6 +13,7 @@
 @interface MICSpread : NSObject
 
 @property (nonatomic, retain) NSArray *cards;
+@property (nonatomic, retain) NSMutableAttributedString *coloredSpread;
 
 +(MICSpread *)initWithStack:(NSArray *)card_stack;
 +(NSMutableArray *)default_card_stack;
@@ -20,10 +21,13 @@
 +(MICSpread *)life_spread;
 +(MICSpread *)grand_solar_spread_for_years:(NSInteger)years;
 -(NSString *)asciiSpread;
+-(NSMutableAttributedString *)coloredAscii;
 -(NSAttributedString *)coloredAsciiSpreadFor:(MICCard *)birth_card;
+-(void)colorCard:(MICCard *)card withColor:(UIColor *)color;
 -(NSInteger)rowOfCard:(MICCard *)card;
 -(NSInteger)columnOfCard:(MICCard *)card;
 -(MICPosition *)positionOfCard:(MICCard *)card;
 -(MICCard *)cardInPosition:(MICPosition *)position;
+-(MICCard *)environmentCardForCard:(MICCard *)birth_card;
 
 @end
