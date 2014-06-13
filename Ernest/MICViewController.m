@@ -19,7 +19,7 @@
     NSTimeInterval seconds = [birthdate.date timeIntervalSinceNow];
     int years_to_count = seconds / (-60*60*24*365.25);
     
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:birthdate.date];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth fromDate:birthdate.date];
     NSInteger day = [components day];
     NSInteger month = [components month];
     
@@ -43,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self displayBirthCard:self.birthDatePicker];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

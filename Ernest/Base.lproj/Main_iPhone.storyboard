@@ -78,6 +78,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="birthDatePicker" destination="OSN-9k-aAK" id="lr7-G3-zkH"/>
                         <outlet property="faceDisplay" destination="hbf-b8-w6o" id="aCu-Jy-FqI"/>
                         <outlet property="solarSpreadDisplay" destination="Uot-PF-eDe" id="N0M-ns-shM"/>
                         <outlet property="suitDisplay" destination="mlM-f4-6ns" id="4rj-EV-iwt"/>

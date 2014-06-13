@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MICViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIDatePicker *birthDatePicker;
 @property (weak, nonatomic) IBOutlet UILabel *faceDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *suitDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *solarSpreadDisplay;
