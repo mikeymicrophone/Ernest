@@ -7,15 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MICCard.h"
+@class MICCard;
+@class MICPosition;
 
 @interface MICSpread : NSObject
 
 @property (nonatomic, retain) NSArray *cards;
 
-+(MICSpread *)initializeWithStack:(NSArray *)card_stack;
-
++(MICSpread *)initWithStack:(NSArray *)card_stack;
++(NSMutableArray *)default_card_stack;
++(MICSpread *)mundane_spread;
++(MICSpread *)grand_solar_spread_for_years:(NSInteger)years;
 -(NSString *)asciiSpread;
 -(NSAttributedString *)coloredAsciiSpreadFor:(MICCard *)birth_card;
+-(NSInteger)rowOfCard:(MICCard *)card;
+-(NSInteger)columnOfCard:(MICCard *)card;
+-(MICPosition *)positionOfCard:(MICCard *)card;
+-(MICCard *)cardInPosition:(MICPosition *)position;
 
 @end

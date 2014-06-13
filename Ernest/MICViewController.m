@@ -18,34 +18,16 @@
 - (IBAction)displayBirthCard:(UIDatePicker*)birthdate {
     NSTimeInterval seconds = [birthdate.date timeIntervalSinceNow];
     int years_to_count = seconds / (-60*60*24*365.25);
-    NSLog([NSString stringWithFormat:@"years_to_count: %d", years_to_count]);
-    
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:birthdate.date];
     NSInteger day = [components day];
     NSInteger month = [components month];
-    NSInteger year = [components year];
-    
-    NSDateComponents *now = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
-    
     
     MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
     
-    NSMutableArray *solar_spread = [MICCard grand_solar_spread_for_years:years_to_count];
+    MICCard *karma_card = [birth_card karmaCardOwe];
     
-    MICSpread *spread = [MICSpread initializeWithStack:solar_spread];
-    
-    
-//    NSLog([NSString stringWithFormat:@"Solar Spread for %d: %@", year, solar_spread]);
-    
-    int position = 0;
-    for (int pos = 0; pos < 55; pos++) {
-        position = pos;
-        if ([MICCard card:birth_card matchesCard:[solar_spread objectAtIndex:pos]]) {
-            break;
-        }
-    }
-//    NSLog([NSString stringWithFormat:@"position of birth card in solar spread: %d", position]);
+    MICSpread *spread = [MICSpread grand_solar_spread_for_years:years_to_count];
     
     self.suitDisplay.text = birth_card.suit;
     self.faceDisplay.text = birth_card.face;

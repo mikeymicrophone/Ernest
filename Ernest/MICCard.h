@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@class MICSpread;
+@class MICPosition;
 
 @interface MICCard : NSObject
 
@@ -15,10 +17,11 @@
 
 +(MICCard *)initWithSuit:(NSString *)suit andFace:(NSString *)face;
 +(MICCard *)birthCardForMonth:(NSInteger)month andDay:(NSInteger)day;
-+(NSMutableArray *)default_card_stack;
-+(NSMutableArray *)grand_solar_spread_for_years:(NSInteger)years;
+
 +(BOOL)card:(MICCard *)card matchesCard:(MICCard *)match;
 -(BOOL)matchesCard:(MICCard *)match;
+-(MICCard *)karmaCardOwe;
 -(NSString *)description;
+-(NSString *)abbreviation;
 
 @end

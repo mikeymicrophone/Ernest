@@ -24,6 +24,7 @@
 		47C59EF91948178800137F24 /* ErnestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59EF81948178800137F24 /* ErnestTests.m */; };
 		47C59F0419481EEF00137F24 /* MICCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59F0319481EEF00137F24 /* MICCard.m */; };
 		47C59F071948DEC500137F24 /* MICSpread.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59F061948DEC500137F24 /* MICSpread.m */; };
+		47C59F0A194A485200137F24 /* MICPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C59F09194A485200137F24 /* MICPosition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		47C59F0319481EEF00137F24 /* MICCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICCard.m; sourceTree = "<group>"; };
 		47C59F051948DEC500137F24 /* MICSpread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICSpread.h; sourceTree = "<group>"; };
 		47C59F061948DEC500137F24 /* MICSpread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICSpread.m; sourceTree = "<group>"; };
+		47C59F08194A485200137F24 /* MICPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICPosition.h; sourceTree = "<group>"; };
+		47C59F09194A485200137F24 /* MICPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICPosition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				47C59F0319481EEF00137F24 /* MICCard.m */,
 				47C59F051948DEC500137F24 /* MICSpread.h */,
 				47C59F061948DEC500137F24 /* MICSpread.m */,
+				47C59F08194A485200137F24 /* MICPosition.h */,
+				47C59F09194A485200137F24 /* MICPosition.m */,
 				47C59EE51948178800137F24 /* Images.xcassets */,
 				47C59ED11948178800137F24 /* Supporting Files */,
 			);
@@ -266,6 +271,7 @@
 			files = (
 				47C59EDB1948178800137F24 /* MICAppDelegate.m in Sources */,
 				47C59EE41948178800137F24 /* MICViewController.m in Sources */,
+				47C59F0A194A485200137F24 /* MICPosition.m in Sources */,
 				47C59ED71948178800137F24 /* main.m in Sources */,
 				47C59F071948DEC500137F24 /* MICSpread.m in Sources */,
 				47C59F0419481EEF00137F24 /* MICCard.m in Sources */,
