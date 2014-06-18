@@ -72,7 +72,13 @@
 
 -(MICCard *)longRangeCardForAge:(NSInteger)age {
     MICSpread *eraSpread = [MICSpread spreadForAge:age];
-    MICCard *longRangeCard = [eraSpread cardInPosition:[eraSpread positionBeyondCard:self byPlaces:(age % 7)]];
+    NSInteger range;
+    if ((age % 7) == 0) {
+        range = 7;
+    } else {
+        range = age % 7;
+    }
+    MICCard *longRangeCard = [eraSpread cardInPosition:[eraSpread positionBeyondCard:self byPlaces:range]];
     return longRangeCard;
 }
 

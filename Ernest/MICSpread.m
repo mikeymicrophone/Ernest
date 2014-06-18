@@ -315,7 +315,12 @@
 }
 
 +(MICSpread *)spreadForAge:(NSInteger)age {
-    NSInteger spreadIndex = (age / 7) + 1;
+    NSInteger spreadIndex;
+    if (age % 7 == 0) {
+        spreadIndex = age / 7;
+    } else {
+        spreadIndex = (age / 7) + 1;
+    }
     MICSpread *spread = [MICSpread grand_solar_spread_for_years:spreadIndex];
     return spread;
 }

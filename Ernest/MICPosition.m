@@ -55,17 +55,45 @@
 }
 
 -(MICPosition *)positionWithDisplacement:(NSInteger)places {
+//    NSLog([NSString stringWithFormat:@"%d places beyond %@", places, self]);
     MICPosition *finalPosition;
-//    if (self.vertical_position == 7) {
-//        <#statements#>
-//    } else if (self.vertical_position > ((self.horizontal_position + places) / 7) +
-    
-    if ((self.horizontal_position + places) < 7) {
-        finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position + places) andVertical:self.vertical_position];
-    } else if ((self.horizontal_position + places) < 14) {
-        finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position) + (places % 7) andVertical:self.vertical_position + 1];
+    if (self.vertical_position == 7) {
+        if ((self.horizontal_position + places) < 3) {
+            finalPosition = [MICPosition initWithHorizontal:self.horizontal_position + places andVertical:self.vertical_position];
+        } else {
+            NSInteger horizontal = ((self.horizontal_position + places - 3) % 7);
+            NSInteger vertical = ((self.horizontal_position + places - 3) / 7);
+            finalPosition = [MICPosition initWithHorizontal:horizontal andVertical:vertical];
+        }
+    } else if (self.vertical_position == 6) {
+        if ((self.horizontal_position + places) < 7) {
+            finalPosition = [MICPosition initWithHorizontal:self.horizontal_position + places andVertical:self.vertical_position];
+        } else if ((self.horizontal_position + places) < 10) {
+            finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position + places - 7) andVertical:6];
+        } else {
+            NSInteger horizontal = (self.horizontal_position + places) - 10;
+            NSInteger vertical = horizontal / 7;
+            finalPosition = [MICPosition initWithHorizontal:horizontal andVertical:vertical];
+        }
+    } else {
+        if ((self.horizontal_position + places) < 7) {
+            finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position + places) andVertical:self.vertical_position];
+        } else if ((self.horizontal_position + places) < 14) {
+            finalPosition = [MICPosition initWithHorizontal:((self.horizontal_position + places) % 7) andVertical:self.vertical_position + 1];
+        }
     }
+    
     return finalPosition;
+}
+
+-(NSString *)description {
+    NSString *description;
+    if (self.card) {
+        description = [NSString stringWithFormat:@"%@ at %dx%d", self.card, self.horizontal_position, self.vertical_position];
+    } else {
+        description = [NSString stringWithFormat:@"position at %dx%d", self.horizontal_position, self.vertical_position];
+    }
+    return description;
 }
 
 @end
