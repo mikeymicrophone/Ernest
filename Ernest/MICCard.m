@@ -60,13 +60,13 @@
 
 -(MICCard *)karmaCardOwe {
     MICCard *karma_card = [[MICSpread natural_spread] cardInPosition:[[MICSpread life_spread] positionOfCard:self]];
-    NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
+//    NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
     return karma_card;
 }
 
 -(MICCard *)karmaCardOwed {
     MICCard *karma_card = [[MICSpread life_spread] cardInPosition:[[MICSpread natural_spread] positionOfCard:self]];
-    NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
+//    NSLog([NSString stringWithFormat:@"karma card: %@", karma_card]);
     return karma_card;
 }
 

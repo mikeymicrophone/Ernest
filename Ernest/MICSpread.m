@@ -310,7 +310,7 @@
 
 -(MICCard *)environmentCardForCard:(MICCard *)birth_card {
     MICCard *card = [self cardInPosition:[[MICSpread life_spread] positionOfCard:birth_card]];
-    NSLog([NSString stringWithFormat:@"environment card: %@", card]);
+//    NSLog([NSString stringWithFormat:@"environment card: %@", card]);
     return card;
 }
 

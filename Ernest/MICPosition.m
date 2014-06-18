@@ -37,9 +37,9 @@
 }
 
 -(NSInteger)asciiPosition {
-    int starting_position;
+    NSInteger starting_position;
     if (self.vertical_position == 7) {
-        starting_position = (6 - self.horizontal_position);
+        starting_position = (6 - (self.horizontal_position * 3));
     } else {
         starting_position = (self.vertical_position * 21) + (18 - (self.horizontal_position * 3)) + 9;
     }
