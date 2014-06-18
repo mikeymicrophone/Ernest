@@ -17,23 +17,25 @@
 @implementation MICViewController
 - (IBAction)displayBirthCard:(UIDatePicker*)birthdate {
     NSTimeInterval seconds = [birthdate.date timeIntervalSinceNow];
-    int years_to_count = seconds / (-60*60*24*365.25);
+    NSInteger age = seconds / (-60*60*24*365.25) + 1;
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth fromDate:birthdate.date];
     NSInteger day = [components day];
     NSInteger month = [components month];
     
-    MICSpread *spread = [MICSpread grand_solar_spread_for_years:years_to_count + 1];
+    MICSpread *spread = [MICSpread grand_solar_spread_for_years:age];
     
     MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
     MICCard *karma_card = [birth_card karmaCardOwe];
     MICCard *other_karma_card = [birth_card karmaCardOwed];
     MICCard *environment_card = [spread environmentCardForCard:birth_card];
+    MICCard *long_range_card = [birth_card longRangeCardForAge:age];
     
     [spread colorCard:birth_card withColor:[UIColor greenColor]];
     [spread colorCard:karma_card withColor:[UIColor brownColor]];
     [spread colorCard:other_karma_card withColor:[UIColor purpleColor]];
     [spread colorCard:environment_card withColor:[UIColor yellowColor]];
+    [spread colorCard:long_range_card withColor:[UIColor orangeColor]];
     
     self.suitDisplay.text = birth_card.suit;
     self.faceDisplay.text = birth_card.face;

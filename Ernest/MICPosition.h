@@ -24,5 +24,6 @@
 -(NSInteger)asciiPosition;
 +(NSDictionary *)planetPositions;
 +(NSString *)planetForPosition:(NSInteger)position;
+-(MICPosition *)positionWithDisplacement:(NSInteger)places;
 
 @end

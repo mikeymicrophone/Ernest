@@ -314,4 +314,16 @@
     return card;
 }
 
++(MICSpread *)spreadForAge:(NSInteger)age {
+    NSInteger spreadIndex = (age / 7) + 1;
+    MICSpread *spread = [MICSpread grand_solar_spread_for_years:spreadIndex];
+    return spread;
+}
+
+-(MICPosition *)positionBeyondCard:(MICCard *)card byPlaces:(NSInteger)places {
+    MICPosition *startingPosition = [self positionOfCard:card];
+    MICPosition *finalPosition = [startingPosition positionWithDisplacement:places];
+    return finalPosition;
+}
+
 @end

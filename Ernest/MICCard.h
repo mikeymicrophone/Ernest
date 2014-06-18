@@ -22,6 +22,7 @@
 -(BOOL)matchesCard:(MICCard *)match;
 -(MICCard *)karmaCardOwe;
 -(MICCard *)karmaCardOwed;
+-(MICCard *)longRangeCardForAge:(NSInteger)age;
 -(NSString *)description;
 -(NSString *)abbreviation;
 

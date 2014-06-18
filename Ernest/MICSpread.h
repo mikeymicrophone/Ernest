@@ -29,5 +29,7 @@
 -(MICPosition *)positionOfCard:(MICCard *)card;
 -(MICCard *)cardInPosition:(MICPosition *)position;
 -(MICCard *)environmentCardForCard:(MICCard *)birth_card;
++(MICSpread *)spreadForAge:(NSInteger)age;
+-(MICPosition *)positionBeyondCard:(MICCard *)card byPlaces:(NSInteger)places;
 
 @end

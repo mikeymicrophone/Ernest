@@ -70,4 +70,10 @@
     return karma_card;
 }
 
+-(MICCard *)longRangeCardForAge:(NSInteger)age {
+    MICSpread *eraSpread = [MICSpread spreadForAge:age];
+    MICCard *longRangeCard = [eraSpread cardInPosition:[eraSpread positionBeyondCard:self byPlaces:(age % 7)]];
+    return longRangeCard;
+}
+
 @end

@@ -54,4 +54,18 @@
     return [[self planetPositions] objectForKey:[NSString stringWithFormat:@"%d", position]];
 }
 
+-(MICPosition *)positionWithDisplacement:(NSInteger)places {
+    MICPosition *finalPosition;
+//    if (self.vertical_position == 7) {
+//        <#statements#>
+//    } else if (self.vertical_position > ((self.horizontal_position + places) / 7) +
+    
+    if ((self.horizontal_position + places) < 7) {
+        finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position + places) andVertical:self.vertical_position];
+    } else if ((self.horizontal_position + places) < 14) {
+        finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position) + (places % 7) andVertical:self.vertical_position + 1];
+    }
+    return finalPosition;
+}
+
 @end
