@@ -69,7 +69,7 @@
         if ((self.horizontal_position + places) < 7) {
             finalPosition = [MICPosition initWithHorizontal:self.horizontal_position + places andVertical:self.vertical_position];
         } else if ((self.horizontal_position + places) < 10) {
-            finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position + places - 7) andVertical:6];
+            finalPosition = [MICPosition initWithHorizontal:(self.horizontal_position + places - 7) andVertical:7];
         } else {
             NSInteger horizontal = (self.horizontal_position + places) - 10;
             NSInteger vertical = horizontal / 7;
