@@ -88,4 +88,10 @@
     return plutoCard;
 }
 
+-(MICCard *)resultCardForAge:(NSInteger)age {
+    MICSpread *eraSpread = [MICSpread spreadForAge:age];
+    MICCard *resultCard = [eraSpread cardInPosition:[eraSpread positionBeyondCard:self byPlaces:9]];
+    return resultCard;
+}
+
 @end

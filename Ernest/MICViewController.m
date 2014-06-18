@@ -31,6 +31,7 @@
     MICCard *environment_card = [spread environmentCardForCard:birth_card];
     MICCard *long_range_card = [birth_card longRangeCardForAge:age];
     MICCard *pluto_card = [birth_card plutoCardForAge:age];
+    MICCard *result_card = [birth_card resultCardForAge:age];
     
     [spread colorCard:birth_card withColor:[UIColor greenColor]];
     [spread colorCard:karma_card withColor:[UIColor brownColor]];
@@ -38,6 +39,7 @@
     [spread colorCard:environment_card withColor:[UIColor yellowColor]];
     [spread colorCard:long_range_card withColor:[UIColor orangeColor]];
     [spread colorCard:pluto_card withColor:[UIColor redColor]];
+    [spread colorCard:result_card withColor:[UIColor blueColor]];
     
     self.suitDisplay.text = birth_card.suit;
     self.faceDisplay.text = birth_card.face;
