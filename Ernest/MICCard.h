@@ -23,6 +23,7 @@
 -(MICCard *)karmaCardOwe;
 -(MICCard *)karmaCardOwed;
 -(MICCard *)longRangeCardForAge:(NSInteger)age;
+-(MICCard *)plutoCardForAge:(NSInteger)age;
 -(NSString *)description;
 -(NSString *)abbreviation;
 
