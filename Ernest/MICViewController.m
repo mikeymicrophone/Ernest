@@ -9,6 +9,8 @@
 #import "MICViewController.h"
 #import "MICCard.h"
 #import "MICSpread.h"
+#import "MICPosition.h"
+#import "MICCardPositionViewController.h"
 
 @interface MICViewController ()
 
@@ -23,27 +25,33 @@
     NSInteger day = [components day];
     NSInteger month = [components month];
     
-    MICSpread *spread = [MICSpread grand_solar_spread_for_years:age];
+    self.spread = [MICSpread grand_solar_spread_for_years:age];
     
-    MICCard *birth_card = [MICCard birthCardForMonth:month andDay:day];
-    MICCard *karma_card = [birth_card karmaCardOwe];
-    MICCard *other_karma_card = [birth_card karmaCardOwed];
-    MICCard *environment_card = [spread environmentCardForCard:birth_card];
-    MICCard *long_range_card = [birth_card longRangeCardForAge:age];
-    MICCard *pluto_card = [birth_card plutoCardForAge:age];
-    MICCard *result_card = [birth_card resultCardForAge:age];
+    self.birth_card = [MICCard birthCardForMonth:month andDay:day];
+    self.position_of_birth_card = [self.spread positionOfCard:self.birth_card];
+    MICCard *karma_card = [self.birth_card karmaCardOwe];
+    MICCard *other_karma_card = [self.birth_card karmaCardOwed];
+    MICCard *environment_card = [self.spread environmentCardForCard:self.birth_card];
+    MICCard *long_range_card = [self.birth_card longRangeCardForAge:age];
+    MICCard *pluto_card = [self.birth_card plutoCardForAge:age];
+    MICCard *result_card = [self.birth_card resultCardForAge:age];
     
-    [spread colorCard:birth_card withColor:[UIColor greenColor]];
-    [spread colorCard:karma_card withColor:[UIColor brownColor]];
-    [spread colorCard:other_karma_card withColor:[UIColor purpleColor]];
-    [spread colorCard:environment_card withColor:[UIColor yellowColor]];
-    [spread colorCard:long_range_card withColor:[UIColor orangeColor]];
-    [spread colorCard:pluto_card withColor:[UIColor redColor]];
-    [spread colorCard:result_card withColor:[UIColor blueColor]];
+    [self.spread colorCard:self.birth_card withColor:[UIColor greenColor]];
+    [self.spread colorCard:karma_card withColor:[UIColor brownColor]];
+    [self.spread colorCard:other_karma_card withColor:[UIColor purpleColor]];
+    [self.spread colorCard:environment_card withColor:[UIColor yellowColor]];
+    [self.spread colorCard:long_range_card withColor:[UIColor orangeColor]];
+    [self.spread colorCard:pluto_card withColor:[UIColor redColor]];
+    [self.spread colorCard:result_card withColor:[UIColor blueColor]];
     
-    self.suitDisplay.text = birth_card.suit;
-    self.faceDisplay.text = birth_card.face;
-    [self.solarSpreadDisplay setAttributedText:[spread coloredSpread]];
+    self.suitDisplay.text = self.birth_card.suit;
+    self.faceDisplay.text = self.birth_card.face;
+    [self.solarSpreadDisplay setAttributedText:[self.spread coloredSpread]];
+}
+
+- (IBAction)enterDetailView:(id)sender {
+    MICCardPositionViewController *detailController = [[MICCardPositionViewController alloc] initWithPosition:self.position_of_birth_card inSpread:self.spread];
+    [self presentViewController:detailController animated:YES completion:nil];
 }
 
 - (void)viewDidLoad

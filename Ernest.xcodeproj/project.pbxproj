@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		477BABCD1962D2B3007A7ED4 /* MICCardPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477BABCC1962D2B3007A7ED4 /* MICCardPositionViewController.m */; };
 		47C59ECB1948178800137F24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECA1948178800137F24 /* Foundation.framework */; };
 		47C59ECD1948178800137F24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECC1948178800137F24 /* CoreGraphics.framework */; };
 		47C59ECF1948178800137F24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C59ECE1948178800137F24 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		477BABCB1962D2B3007A7ED4 /* MICCardPositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICCardPositionViewController.h; sourceTree = "<group>"; };
+		477BABCC1962D2B3007A7ED4 /* MICCardPositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICCardPositionViewController.m; sourceTree = "<group>"; };
 		47C59EC71948178800137F24 /* Ernest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ernest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C59ECA1948178800137F24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47C59ECC1948178800137F24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,8 @@
 				47C59F09194A485200137F24 /* MICPosition.m */,
 				47C59EE51948178800137F24 /* Images.xcassets */,
 				47C59ED11948178800137F24 /* Supporting Files */,
+				477BABCB1962D2B3007A7ED4 /* MICCardPositionViewController.h */,
+				477BABCC1962D2B3007A7ED4 /* MICCardPositionViewController.m */,
 			);
 			path = Ernest;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				47C59ED71948178800137F24 /* main.m in Sources */,
 				47C59F071948DEC500137F24 /* MICSpread.m in Sources */,
 				47C59F0419481EEF00137F24 /* MICCard.m in Sources */,
+				477BABCD1962D2B3007A7ED4 /* MICCardPositionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +495,7 @@
 				47C59EFE1948178800137F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47C59EFF1948178800137F24 /* Build configuration list for PBXNativeTarget "ErnestTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +504,7 @@
 				47C59F011948178800137F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
