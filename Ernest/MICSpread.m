@@ -32,6 +32,14 @@
     return cards;
 }
 
++(void)printDefaultCardStack {
+    NSMutableArray *all_cards = [self default_card_stack];
+    for (int i = 0; i < 52; i++) {
+        NSLog([NSString stringWithFormat:@"%d: %@", i, [all_cards objectAtIndex:i]]);
+        NSLog([NSString stringWithFormat:@"%@", [[all_cards objectAtIndex:i] listBirthdays]]);
+    }
+}
+
 +(MICSpread *)natural_spread {
     MICSpread *spread = [self initWithStack:[self default_card_stack]];
     return spread;

@@ -58,6 +58,7 @@
 {
     [super viewDidLoad];
     [self displayBirthCard:self.birthDatePicker];
+//    [MICSpread printDefaultCardStack];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

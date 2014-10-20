@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9307245F-FF0C-4D22-B01A-2000FA3E3034</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ernest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>97D27DB8ED1CE8C7E243D7361C6A787DF01A4ACE</key>
+		<string>ssh://github.com/mikeymicrophone/Ernest.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ernest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>97D27DB8ED1CE8C7E243D7361C6A787DF01A4ACE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/mikeymicrophone/Ernest.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>97D27DB8ED1CE8C7E243D7361C6A787DF01A4ACE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>97D27DB8ED1CE8C7E243D7361C6A787DF01A4ACE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ernest</string>
+		</dict>
+	</array>
+</dict>
+</plist>

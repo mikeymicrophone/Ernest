@@ -27,5 +27,7 @@
 -(MICCard *)resultCardForAge:(NSInteger)age;
 -(NSString *)description;
 -(NSString *)abbreviation;
+-(NSArray *)birthdays;
+-(NSString *)listBirthdays;
 
 @end
