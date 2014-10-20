@@ -96,31 +96,29 @@
 
 -(NSArray *)birthdays {
     NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:2014];
     NSDictionary *number_of_days_in_month = @{@1:@31, @2:@28, @3:@31, @4:@30, @5:@31, @6:@30, @7:@31, @8:@31, @9:@30, @10:@31, @11:@30, @12:@31};
     NSArray *months = @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12];
-    NSMutableArray *all_cards = [MICSpread default_card_stack];
-    MICCard *card;
     NSMutableArray *dates = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 52; i++) {
-        card = [all_cards objectAtIndex:i];
+    [[MICSpread default_card_stack] enumerateObjectsWithOptions:NSEnumerationConcurrent
+                                usingBlock:^(MICCard *card, NSUInteger i, BOOL *stop)
+    {
         if ([card matchesCard:self]) {
             for (NSNumber *month in months) {
                 int day = 54 - (2 * month.intValue) - i;
-                if (day < 0) {
+                if (day < 1) {
                     continue;
                 }
                 if (day < [[number_of_days_in_month objectForKey:month] intValue]) {
-                    NSDateComponents *components = [[NSDateComponents alloc] init];
                     [components setDay:day];
                     [components setMonth:month.intValue];
-                    [components setYear:2014];
-                    NSDate *date = [calendar dateFromComponents:components];
-                    [dates addObject:date];
+                    [dates addObject:[calendar dateFromComponents:components]];
                 }
             }
-            return dates;
+            *stop = YES;
         }
-    }
+    }];
     return dates;
 }
 
